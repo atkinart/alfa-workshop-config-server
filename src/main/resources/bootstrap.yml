@@ -1,0 +1,27 @@
+spring:
+ application:
+  name: config-server
+ cloud:
+  config:
+   server:
+    git:
+     uri: file://${user.home}/git/workshop/configs
+
+
+eureka:
+ client:
+  registryFetchIntervalSeconds: 5
+  healthcheck:
+   enabled: true
+  enabled: true
+
+logging:
+  level:
+    root: INFO
+
+management:
+  security:
+    enabled: false
+
+server:
+  port: 8888
